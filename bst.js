@@ -1,4 +1,4 @@
-function getDepth(node, val) {
+function getDepth(node, val, depth = 0) {
   if (val === node.val) {
     return depth;
   } else if (val < node.val) {

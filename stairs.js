@@ -20,4 +20,4 @@ function numWaysMemoized(n) {
   return memo[n];
 }
 
-numWaysMemoized(5);
+console.log(numWaysMemoized(5));
