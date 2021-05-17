@@ -1,4 +1,4 @@
-function getDepth(node, val, depth = 0) {
+function getDepth(val, node, depth = 0) {
   if (val === node.val) {
     return depth;
   } else if (val < node.val) {
@@ -8,9 +8,28 @@ function getDepth(node, val, depth = 0) {
   }
 }
 
+getDepth = (val, bst) => {
+  if (bst.val === val) {
+    return 0;
+  } else {
+    if (val < bst.val) {
+      return 1 + getDepth(val, bst.left);
+    } else {
+      return 1 + getDepth(val, bst.right);
+    }
+  }
+};
+
+
 let explanation = ```
 
-getDepth(15)
+node = {
+  value: number,
+  left: alsoNodes || null,
+  right: alsoNodes || null
+}
+
+getDepth(15, rootNode)
 
         10
        /  \

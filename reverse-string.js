@@ -1,3 +1,8 @@
+// test string
+// first go through:
+// g + reverseRecurive(test strin)
+// second go through
+// gn + reverseRecursive(test stri)
 const reverseRecursive = (str) => {
   if (str === '') {
     return '';

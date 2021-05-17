@@ -1,12 +1,33 @@
 // Kadane's Algo
 
-const maxSubsequenceSum = (arr) => {
-  let currentMax = (globalMax = arr[0]);
+// let arr3 = [-2, -3, 4, -1, 0, 5, -3]; // max = 8
 
-  for (let i = 0; i < arr.length; i++) {
+const maxSubsequenceSum = (arr) => {
+  let currentMax = arr[0];
+  let globalMax = arr[0]
+
+  for (let i = 1; i < arr.length; i++) {
     // see if current element increases max
+    // currentMax = -2
+    // Math.max(-3, -2 - 3)
+    // currentMax = -3
+    // Math.max(4, -3 + 4)
+    // currentMax = 4
+    // Math.max(-1, 4 - 1)
+    // currentMax = 3
+    // Math.max(5, 3 + 5)
+    // currentMax = 8
     currentMax = Math.max(arr[i], currentMax + arr[i]);
     // see if current max is bigger than global max
+    // globalMax = -2
+    // Math.max(-3, -2)
+    // globalMax = -2
+    // Math.max(4, -2)
+    // globalMax = 4
+    // globalMax = Math.max(3, 4)
+    // globalMax = 4
+    // Math.max(8, 4)
+    // globalMax = 8
     globalMax = Math.max(currentMax, globalMax);
   }
 

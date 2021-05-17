@@ -10,7 +10,7 @@ function numWaystoClimb(n) {
 
 // Memoization for Memory Optimization
 let memo = {};
-
+3
 function numWaysMemoized(n) {
   memo[1] = 1;
   memo[2] = 2;
